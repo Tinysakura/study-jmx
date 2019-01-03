@@ -1,6 +1,6 @@
 package com.cfh.studyjmx.notification;
 
-import com.cfh.studyjmx.mbean.Test;
+import com.cfh.studyjmx.mbean.standard.Test;
 
 import javax.management.Notification;
 

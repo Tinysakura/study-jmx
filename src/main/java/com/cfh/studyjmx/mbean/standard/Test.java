@@ -1,4 +1,4 @@
-package com.cfh.studyjmx.mbean;
+package com.cfh.studyjmx.mbean.standard;
 
 /**
  * @Author: chenfeihao@corp.netease.com

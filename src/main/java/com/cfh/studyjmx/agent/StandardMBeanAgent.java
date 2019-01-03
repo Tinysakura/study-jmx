@@ -5,7 +5,7 @@
 
 package com.cfh.studyjmx.agent;
 
-import com.cfh.studyjmx.mbean.Test;
+import com.cfh.studyjmx.mbean.standard.Test;
 import com.sun.jdmk.comm.HtmlAdaptorServer;
 
 import javax.management.MBeanServer;
@@ -23,13 +23,13 @@ import java.rmi.registry.Registry;
  * Agent层，通过Standard MBean对对象资源进行管理
  */
 
-public class TestAgent {
+public class StandardMBeanAgent {
     public static void main(String[] args) throws Exception{
         // 创建一个MBeanServer用于注册MBean
         // MBeanServer mBeanServer = MBeanServerFactory.createMBeanServer();
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
         // 为MBean创建ObjectName实例
-        String domainName="MyMbean";
+        String domainName="StandardMbean";
         ObjectName testName = new ObjectName(domainName+":name=testJMX");
         // 将Hello这个对象资源注册到MBeanServer上
         mBeanServer.registerMBean(new Test(), testName);
