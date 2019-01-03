@@ -55,7 +55,7 @@ public class ModelMBeanUtils {
                 "get name attribute", // 描述文字
                 null, //
                 "java.lang.String", // 返回值类型
-                MBeanOperationInfo.ACTION, //
+                MBeanOperationInfo.INFO, //
                 getStateDesc //desc信息
         );
 
