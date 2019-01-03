@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- modele辅助开发MBean描述文件 -->
+<mbeans-descriptors>
+    <!-- mbean标签声明一个MBean
+      name -> 被MBean管理的类的类名
+      description -> 描述
+      domain -> agent域
+      type -> 被管理的类资源的全类名
+    -->
+    <mbean name="Test" description="the test bean" domain="modeler" group="testGroup" type="com.cfh.studyjmx.mbean.modeler.Test">
+        <!-- attribute标签声明属性信息
+          name -> 属性名
+          description -> 描述
+          type -> 属性类型的全类名
+          writeable -> 是否可写
+        -->
+        <attribute name="name" description="a name attribute" type="java.lang.String" writeable="true"/>
+        <!-- operation标签声明方法信息
+          name -> 方法名
+          description -> 描述
+          returnType -> 返回值类型全类名
+        -->
+        <operation name="printHello" description="public void printHello()" impact="INFO" returnType="void"/>
+        <operation name="printHello" description="public void printHello(String whoName)" impact="INFO" returnType="void">
+            <!-- parameter标签声明方法的入参信息
+              name -> 参数名
+              description -> 参数描述
+              type -> 参数类型全类名
+            -->
+            <parameter name="whoName" description="method parameter of printHello" type="java.lang.String"></parameter>
+        </operation>
+    </mbean>
+</mbeans-descriptors>
